@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashaswi K's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Include Tailwind CSS for styling -->
+    <style>
+        /* Flexbox-based layout for the main sections */
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* Grid layout for projects section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Styling project cards */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Styling for contact form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Dark Mode Toggle Button -->
+    <div class="p-4 text-right">
+        <button onclick="toggleDarkMode()" class="px-4 py-2 bg-blue-500 text-white rounded">Toggle Dark Mode</button>
+    </div>
+    
+    <!-- Home Section -->
+    <section class="section-container bg-cover bg-center" style="background-image: url('background.jpg');">
+        <h1 class="text-5xl font-bold">Welcome to My Portfolio</h1>
+        <p class="text-xl mt-4">Yashaswi K(Secure Web-Developer)</p>
+    </section>
+    
+    <!-- About Me Section -->
+    <section class="section-container">
+        <img src="your-banner.jpeg" alt="Yashaswi K's Picture" class="w-32 h-32 rounded-full">
+        <h2 class="text-3xl font-bold mt-4">About Me</h2>
+        <p class="mt-2 text-center max-w-lg">I'm YASHASWI K,BE graduate with CSE.I enjoy creating user-friendly websites,innovative designs.Skilled in HTML,CSS,JavaScript,Java,Python.I have worked on projects like Note Taking Application,Car Rental Management System,To-Do List App,Mobil Application to detect nearby Ambulances etc...</p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="section-container">
+        <h2 class="text-3xl font-bold">Projects</h2>
+        <div class="projects-grid"> <!-- Responsive Grid Layout -->
+            <div class="project-card bg-white">
+                <img src="amb-app.jpg" alt="Project 1" class="rounded-lg">
+                <h3 class="mt-2 font-bold">Project 1:Mobile Application To Detect Nearby Ambulances</h3>
+                <p>This application is designed to enhance road safety by detecting nearby ambulances in real time. It notifies users with alerts and vibrations when an ambulance is approaching,allowing them to clear the way efficiently.The app utilizes real-time data from ambulance drivers to ensure timely and accurate alerts..</p>
+                <a href="#" class="text-blue-500">View Project</a>
+            </div>
+            <div class="project-card bg-white">
+                <img src="note.webp" alt="Project 2" class="rounded-lg">
+                <h3 class="mt-2 font-bold">Project 2:Note Taking Application.</h3>
+                <p>This app allows users to create, organize, and manage their notes efficiently.It features real-time syncing, rich text formatting, and categorization for better organization. With cloud storage integration, users can access their notes anytime, anywhere.</p>
+                <a href="#" class="text-blue-500">View Project</a>
+            </div>
+            <div class="project-card bg-white">
+                <img src="car-rental.jpg" alt="Project 3" class="rounded-lg">
+                <h3 class="mt-2 font-bold">Project 3:Car Rental Management System.</h3>
+                <p>The Car Rental Management System is a digital platform that streamlines vehicle bookings, payments for rental companies. It enables customers to browse available cars, make reservations, and track rentals, while administrators can monitor vehicle status and manage bookings efficiently.
+</p>
+                <a href="#" class="text-blue-500">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section-container bg-gray-200">
+        <h2 class="text-3xl font-bold">Contact Me</h2>
+        <form class="contact-form bg-white p-6 shadow-md rounded-lg">
+            <label class="block text-left">Name:</label>
+            <input type="text" value="Yashaswi K" class="w-full p-2 border rounded">
+            
+            <label class="block text-left">Email:</label>
+            <input type="email" value="yashaswik44@gmail.com" class="w-full p-2 border rounded">
+            
+            <label class="block text-left">Message:</label>
+            <textarea class="w-full p-2 border rounded">Hello, I'd love to connect with you!</textarea>
+        </form>
+        <p class="mt-4">Connect with me on <a href="https://github.com/Yashaswi315" class="text-blue-500">GitHub</a></p>
+    </section>
+    
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("bg-gray-900");
+            document.body.classList.toggle("text-white");
+        }
+    </script>
+    
+</body>
+</html>
